@@ -1,0 +1,154 @@
+/* GENERAL */
+
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Ubuntu", monospace;
+}
+
+#root{
+    display: flex;
+    flex-direction: column;
+    background-color: #2e2e2e;
+    min-height: 100vh;
+}
+
+
+
+/* NAVBAR */
+
+.navbar{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 50px;
+    background-color: #252525;
+    color: white;
+    border-bottom: 1px solid black;
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 999;
+}
+
+
+/* CONTENT */
+
+.content{
+    flex-grow: 1;
+    background-color: #2e2e2e;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 30px;
+    gap: 20px;
+}
+
+.content .card{
+    position: relative;
+    background-color: #3e3e3e;
+    border-radius: 20px;
+    text-align: center;
+    width: min(800px, 90vw);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    color: white;
+    border: 1px solid black;
+}
+
+.content .card p{
+    color: silver;
+}
+
+.content .card img{
+    position: absolute;
+    right: 20px;
+    display: block;
+    cursor: pointer;
+    height: 3em;
+    width: auto;
+    border-radius: 50%;
+    background-color: gray;
+}
+
+
+/* EXCEPTIONS */
+
+.error, .loading, .zerocards{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 20px;
+    color: silver;
+}
+
+
+/* NEWCARD */
+
+.newcard{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:  70px 20px 20px 20px;
+}
+
+.newcard form{
+    display: flex;
+    width: min(800px,80vw);
+}
+
+.newcard form input{
+    height: 3em;
+    flex-grow: 1;
+    border: none;
+    outline: none;
+    background-color: #4d4d4d;
+    border: 1px solid black;
+    padding: 0 1rem;
+    color: white;
+}
+
+.newcard form input:focus{
+    border: 2px solid blue;
+}
+
+.newcard form .name{
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+}
+
+.newcard form button{
+    height: 3em;
+    flex-grow: 1;
+    background-color: rgb(62, 62, 255);
+    outline: none;
+    border: none;
+    color: white;
+    border: 1px solid black;
+    border-left: none;
+    cursor: pointer;
+    border-radius: 0 10px 10px 0;
+}
+
+@media screen and (max-width: 650px){
+
+    .newcard form {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .newcard form .name, .newcard form .age , .newcard form button{
+        border-radius: 10px 10px 10px 10px;
+    }
+}
+
