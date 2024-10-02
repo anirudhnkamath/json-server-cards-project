@@ -10,6 +10,7 @@ This is a React based project which uses a JSON Server as a fake backend to perf
 + HTML
 + CSS
 + JSON Server
++ GSAP
 
 ## Features
 
